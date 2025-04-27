@@ -5,6 +5,7 @@ import { lusitana } from '@/app/ui/fonts'
 import { fetchLatestInvoices, fetchCardData } from '@/app/lib/data'
 import { Suspense } from 'react'
 import { RevenueChartSkeleton } from '@/app/ui/skeletons'
+import { formatCurrency } from '@/app/lib/utils'
 
 export default async function Page() {
 	const latestInvoices = await fetchLatestInvoices()
@@ -14,14 +15,15 @@ export default async function Page() {
 		totalPaidInvoices,
 		totalPendingInvoices,
 	} = await fetchCardData()
+	
 	return (
 		<main>
 			<h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
-				Панель управления
+				Основная информация
 			</h1>
 			<div className='grid gap-6 sm:grid-cols-2 lg:grid-cols-4'>
-				<Card title='Получено:' value={totalPaidInvoices} type='collected' />
-				<Card title='В ожидании:' value={totalPendingInvoices} type='pending' />
+				<Card title='Получено:' value={formatCurrency(totalPaidInvoices)} type='collected' />
+				<Card title='В ожидании:' value={formatCurrency(totalPendingInvoices)} type='pending' />
 				<Card title='Всего заказов:' value={numberOfInvoices} type='invoices' />
 				<Card
 					title='Всего пользователей:'
