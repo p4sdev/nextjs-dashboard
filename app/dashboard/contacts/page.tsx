@@ -1,3 +1,3 @@
 export default function Page() {
-	return <p>Contacts Page</p>
+	return <p>Страница с контактами</p>
 }
