@@ -31,7 +31,7 @@
 
 | Стартовая страница | Форма входа | Главная страница | Страница заказов | Создание заказов | Редактор заказа |
 |----------------|------------------|------------------|------------------|------------------|------------------|
-| ![Dashboard](./public/started-page.png) | ![Form](./public/login-page.png) | ![Main](./public/main-page.png) | ![Orders](./public/orders-page.png) | ![Create](./public/create-order.png) | ![Edit](./public/edit-order.png)
+| ![Dashboard](./public/1.png) | ![Form](./public/2.png) | ![Main](./public/3.png) | ![Orders](./public/4.png) | ![Create](./public/5.png) | ![Edit](./public/6.png)
 
 ---
 
