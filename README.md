@@ -33,8 +33,6 @@
 |----------------|------------------|------------------|------------------|------------------|------------------|
 | ![Dashboard](./public/started-page.png) | ![Form](./public/login-page.png) | ![Main](./public/main-page.png) | ![Orders](./public/orders-page.png) | ![Create](./public/create-order.png) | ![Edit](./public/edit-order.png)
 
-> 📌 Скриншоты можно заменить своими (папка `/public`), если ещё не добавлены
-
 ---
 
 ## ⚙️ Установка и запуск
