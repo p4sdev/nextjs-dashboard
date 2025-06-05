@@ -29,11 +29,11 @@ export default async function UsersPage() {
 
 						<div className='flex gap-2'>
 							<Link href={`/users/${user.id}/edit`}>
-								<Button>✏️</Button>
+								<Button>Редактировать</Button>
 							</Link>
 							<form action={`/api/users/${user.id}`} method='POST'>
 								<input type='hidden' name='_method' value='DELETE' />
-								<Button>🗑</Button>
+								<Button>Удалить</Button>
 							</form>
 						</div>
 					</div>

@@ -4,12 +4,12 @@ import { notFound, redirect } from 'next/navigation'
 import { revalidatePath } from 'next/cache'
 
 type Props = {
-	params: { id: string }
+	params: Promise<{ id: string }>
 }
 
 export default async function EditUserPage({ params }: Props) {
 	const user = await prisma.user.findUnique({
-		where: { id: params.id },
+		where: { id: params },
 	})
 
 	if (!user) return notFound()
