@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@prisma/client": "^6.9.0",
     "@tailwindcss/forms": "^0.5.10",
     "@vercel/speed-insights": "^1.2.0",
     "autoprefixer": "10.4.20",
@@ -16,6 +17,7 @@
     "next-auth": "5.0.0-beta.28",
     "postcss": "8.5.1",
     "postgres": "^3.4.5",
+    "prisma": "^6.9.0",
     "react": "latest",
     "react-dom": "latest",
     "tailwindcss": "3.4.17",
