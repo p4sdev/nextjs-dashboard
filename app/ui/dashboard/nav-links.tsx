@@ -20,7 +20,7 @@ const links = [
 		href: '/dashboard/invoices',
 		icon: DocumentDuplicateIcon,
 	},
-	{ name: 'Пользователи', href: '/dashboard/customers', icon: UserGroupIcon },
+	{ name: 'Пользователи', href: '/dashboard/users', icon: UserGroupIcon },
 	{ name: 'О нас', href: '/dashboard/about', icon: InformationCircleIcon },
 	{ name: 'Контакты', href: '/dashboard/contacts', icon: PhoneIcon },
 ]
