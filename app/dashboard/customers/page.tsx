@@ -1,9 +1,10 @@
-import { lusitana } from '@/app/ui/fonts'
+import CustomersTable from '@/app/ui/customers/table'
+import { fetchFilteredCustomers } from '@/app/lib/data'
 
-export default function Page() {
-	return (
-		<h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
-			Пользователи
-		</h1>
-	)
+export default async function Page() {
+	const customers = await fetchFilteredCustomers('')
+
+	const table = await CustomersTable({ customers })
+
+	return <div>{table}</div>
 }
