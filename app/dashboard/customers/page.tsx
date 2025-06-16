@@ -4,8 +4,9 @@ import { Suspense } from 'react'
 
 export default async function Page() {
 	const customers = await fetchFilteredCustomers('')
-
-	const table = await CustomersTable({ customers })
-
-	return <Suspense>{table}</Suspense>
+	return (
+		<Suspense>
+			<CustomersTable customers={customers} />
+		</Suspense>
+	)
 }
