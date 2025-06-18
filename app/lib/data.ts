@@ -216,3 +216,23 @@ export async function fetchFilteredCustomers(query: string) {
     throw new Error('Failed to fetch customer table.');
   }
 }
+
+
+export async function fetchCustomersPages(query: string) {
+	try {
+		const data = await sql`
+			SELECT COUNT(*) 
+			FROM customers
+			WHERE
+				id::text ILIKE ${`%${query}%`} OR
+				name ILIKE ${`%${query}%`} OR
+				email ILIKE ${`%${query}%`}
+		`
+
+		const totalPages = Math.ceil(Number(data[0].count) / ITEMS_PER_PAGE)
+		return totalPages
+	} catch (error) {
+		console.error('Database Error:', error)
+		throw new Error('Failed to fetch total number of customers.')
+	}
+}
