@@ -15,10 +15,15 @@ export default function Page() {
 					<p
 						className={`${geistMono.className} text-xl text-gray-800 md:text-3xl md:leading-normal`}
 					>
-						<strong>Добро пожаловать!</strong> Это учебный проект в рамках{' '}
-						<Link href='https://nextjs.org/learn/' className='text-blue-500'>
-							курса по изучению Next.js от Vercel.
-						</Link>
+						<strong>Добро пожаловать!</strong> Это проект в рамках
+						учебного{' '}
+						<Link
+							href='https://nextjs.org/learn/'
+							className='inline-block transition ease-in-out duration-500 text-gray-800 hover:text-blue-600 hover:scale-110'
+						>
+							курса
+						</Link>{' '}
+						по Next.js от Vercel.
 					</p>
 					<Link
 						href='/login'
