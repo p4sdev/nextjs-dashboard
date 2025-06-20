@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { FormattedCustomersTable } from '@/app/lib/definitions'
 import { fetchFilteredCustomers } from '@/app/lib/data'
 
 export default async function CustomersTable({
@@ -8,7 +7,6 @@ export default async function CustomersTable({
 }: {
 	query: string
 	currentPage: number
-	customer: FormattedCustomersTable[]
 	}) {
 	const customers = await fetchFilteredCustomers(query, currentPage)
 	return (

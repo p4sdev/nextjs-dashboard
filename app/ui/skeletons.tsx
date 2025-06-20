@@ -258,25 +258,24 @@ export function CustomersTableSkeleton() {
 						<thead className='rounded-lg text-left text-sm font-normal'>
 							<tr>
 								<th scope='col' className='px-4 py-5 font-medium sm:pl-6'>
-									Пользователь
+									Имя
 								</th>
 								<th scope='col' className='px-3 py-5 font-medium'>
 									Почта
 								</th>
 								<th scope='col' className='px-3 py-5 font-medium'>
-									Сумма
+									Всего заказов
 								</th>
 								<th scope='col' className='px-3 py-5 font-medium'>
-									Дата
+									В ожидании
 								</th>
 								<th scope='col' className='px-3 py-5 font-medium'>
-									Статус
+									Оплачено
 								</th>
 								<th
 									scope='col'
 									className='relative pb-4 pl-3 pr-6 pt-2 sm:pr-6'
 								>
-									<span className='sr-only'>Изменить</span>
 								</th>
 							</tr>
 						</thead>
