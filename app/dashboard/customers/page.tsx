@@ -1,5 +1,5 @@
 import { lusitana } from '@/app/ui/fonts'
-import { CustomersTable } from '@/app/ui/customers/table'
+import CustomersTable from '@/app/ui/customers/table'
 import { fetchFilteredCustomers } from '@/app/lib/data'
 import { fetchCustomersPages } from '@/app/lib/data'
 import { Suspense } from 'react'
@@ -16,7 +16,7 @@ export default async function Page(props: {
 	const searchParams = await props.searchParams
 	const query = searchParams?.query || ''
 	const currentPage = Number(searchParams?.page) || 1
-	const customer = await fetchFilteredCustomers(query)
+	const customer = await fetchFilteredCustomers(query, currentPage)
 	const totalPages = await fetchCustomersPages(query)
 	return (
 		<div>
